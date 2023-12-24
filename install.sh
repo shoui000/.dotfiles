@@ -5,3 +5,4 @@
 ln -s ~/projetos/.dotfiles/nvim ~/.config/nvim # Creates symlink of nvim configs
 ln -s ~/projetos/.dotfiles/.dotfiles/.bash_aliases ~/.bash_aliases # Creates symlink of bash_aliases
 #  have to create a method of adding bash commands to the .bashrc auto
+#  have to create a method of auto chmod every command in the bash commands folder
