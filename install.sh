@@ -7,3 +7,4 @@ ln -s ~/projetos/.dotfiles/.dotfiles/.bash_aliases ~/.bash_aliases # Creates sym
 #  have to create a method of adding bash commands to the .bashrc auto
 #  have to create a metohd of adding $ADVENT to .bashrc
 #  have to create a method of auto chmod every command in the bash commands folder
+#  install fzf

@@ -46,5 +46,7 @@ require("lazy").setup({
 	{'hrsh7th/nvim-cmp'},
 	{'L3MON4D3/LuaSnip'},
 
-    {'ThePrimeagen/vim-be-good'}
+    {'ThePrimeagen/vim-be-good'},
+    {'vim-airline/vim-airline'},
+    {'tpope/vim-commentary'},
 }, opts)
