@@ -22,15 +22,11 @@ require("lazy").setup({
 
 	{'nvim-telescope/telescope.nvim', tag = '0.1.5', dependencies = { 'nvim-lua/plenary.nvim' }},
 
-	{'maxmx03/dracula.nvim',
+	{'sainnhe/gruvbox-material',
 	lazy = false, -- make sure we load this during startup if it is your main colorscheme
 	priority = 1000, -- make sure to load this before all the other start plugins
 	config = function ()
-		local dracula = require 'dracula'
-
-		dracula.setup()
-
-		vim.cmd.colorscheme 'dracula'
+		vim.cmd.colorscheme 'gruvbox-material'
 	end},
 
 	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
