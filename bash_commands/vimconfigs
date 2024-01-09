@@ -1,4 +1,0 @@
-#!/bin/bash
-
-cd ~/projetos/.dotfiles/nvim
-nvim .
