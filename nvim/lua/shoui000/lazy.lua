@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 local opts = {
     install = {
         missing = true,
-        colorscheme = {'dracula'}
     }
 }
 
@@ -55,6 +54,8 @@ require("lazy").setup({
             { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
         },
     },
+
+    {'m4xshen/smartcolumn.nvim'},
 
     {'ThePrimeagen/vim-be-good'},
     {'vim-airline/vim-airline'},
