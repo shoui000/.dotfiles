@@ -54,7 +54,7 @@ require("lazy").setup({
             { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
             { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
         },
-    }
+    },
 
     {'ThePrimeagen/vim-be-good'},
     {'vim-airline/vim-airline'},
