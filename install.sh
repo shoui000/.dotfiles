@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # have to chmod +x ./install.sh to work
 
+# install tmux, tpm
 sudo snap install nvim --classic -y
 ln -s ~/projetos/.dotfiles/nvim ~/.config # Creates symlink of nvim configs
 
