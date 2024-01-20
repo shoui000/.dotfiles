@@ -1,7 +1,3 @@
 export XDG_CONFIG_HOME=$HOME/.config
 
 export DOTFILES=$HOME/.dotfiles
-
-path+=('/home/.local/scripts')
-
-export PATH

@@ -107,3 +107,6 @@ export NVM_DIR="$HOME/.nvm"
 alias cls=clear
 alias python=python3
 alias vim=nvim
+
+path+=("$HOME/.local/bin")
+export PATH
