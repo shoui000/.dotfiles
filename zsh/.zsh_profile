@@ -1,3 +1,13 @@
 export XDG_CONFIG_HOME=$HOME/.config
 
+export ADVENT=$HOME/projetos/advent-of-code
 export DOTFILES=$HOME/.dotfiles
+
+# ALIASES
+alias cls=clear
+alias python=python3
+alias vim=nvim
+
+# PATH
+path+=("$HOME/.local/bin")
+export PATH
