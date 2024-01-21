@@ -1,40 +1,23 @@
 #!/usr/bin/zsh
-#
-# find last modified project
-#   - ask if want to open this
-#   - or another
-#
-# if not empty - 
-#   - ask if want to open the last modified day
-#   - ask if want to create next day folder
-#       - in the root of the project folder have the
-#         instructions of creating a folder
-#   - ask if want to open another day
-#
-# if empty -
-#   - ask if want to create the first day folder
-#   - ask if want to open vim in the new folder
-#
-# open - open a tmux session with two panels 
-#       - one with vim in the folder
-#       - one terminal on the folder
+# verify is alredy in a tmux session to close it and open another
 PS3=">> "
 
 # Ask for the project folder
-LAST=$(ls -d */ -t | head -1)
-MODIFIED=$(date -r $LAST "+%b %d %H:%M")
-echo "You want to open the last modified folder?"
-echo "- $LAST"
-echo "- modified in $MODIFIED" 
+cd "$ADVENT" || exit
+LAST_PROJECT=$(ls -d ./* -t | head -1)
+MODIFIED_PROJECT=$(date -r "$LAST_PROJECT" "+%b %d %H:%M")
+echo "You want to open the last advent of code opened?"
+echo "- $LAST_PROJECT"
+echo "- modified in $MODIFIED_PROJECT" 
 
 select opt in "Yes" "Select by my own" "Create a new advent of code"; do
     case $opt in
         "Yes")
-            cd $LAST
+            cd "$LAST_PROJECT" || exit
             break
             ;;
         "Select by my own")
-            cd $(find . -maxdepth 1 -type d -not -path "./.git*" -not -path "." -print | fzf)
+            cd "$(find . -maxdepth 1 -type d -not -path "./.git*" -not -path "." -print | fzf)" || exit
             break
             ;;
         "Create a new advent of code")
@@ -44,28 +27,44 @@ select opt in "Yes" "Select by my own" "Create a new advent of code"; do
 done
 
 # Ask for the day folder
-local LAST=$(ls -d */ -t | head -1)
-local MODIFIED=$(date -r $LAST "+%b %d %H:%M")
+if [ -z "$(ls -A .)" ]; then
+    echo "Empty"
+    select emptt in "Create the first day folder" "Open in the project folder"; do
+        case $emptt in
+            "Create the first day folder")
+                break
+                ;;
+            "Open in the project folder")
+                break
+                ;;
+        esac
+    done
+else
+    LAST_DAY=$(ls -d ./* -t | head -1)
+    MODIFIED_DAY=$(date -r "$LAST_DAY" "+%b %d %H:%M")
 
-echo "You want to open the last modified folder?"
-echo "- $LAST"
-echo "- modified in $MODIFIED"
+    echo "You want to open the last day modified?"
+    echo "- $LAST_DAY"
+    echo "- modified in $MODIFIED_DAY"
 
-select optt in "Yes" "Select the last day" "Select by my own" "Create a new day"; do
-    case $optt in
-        "Yes")
-            echo "yes"
-            break
-            ;;
-        "I want to select the last day")
-            break
-            ;;
-        "Select by my own")
-            break
-            ;;
-        "Create a new day")
-            break
-            ;;
-    esac
-done
-
+    select optt in "Yes" "Select the last day" "Select by my own" "Create a new day"; do
+        case $optt in
+            "Yes")
+                cd "$LAST_DAY" || exit
+                tmux new-session -s advent -n $(basename $(pwd)) 
+                break
+                ;;
+            "Select the last day")
+                cd "$(find ./* -maxdepth 1 -type d | sort -nr | head -1)" || exit
+                break
+                ;;
+            "Select by my own")
+                cd "$(find . -maxdepth 1 -type d -not -path "./.git*" -not -path "." -print | fzf)" || exit
+                break
+                ;;
+            "Create a new day")
+                break
+                ;;
+        esac
+    done
+fi
