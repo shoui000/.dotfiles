@@ -8,6 +8,9 @@ alias cls=clear
 alias python=python3
 alias vim=nvim
 
+# KEYBINDINGS
+bindkey -s ^f "advent -a\n"
+
 # PATH
 path+=("$HOME/.local/bin")
 export PATH
