@@ -71,6 +71,4 @@ else
     fi
 fi
 
-tmux new-session -s advent -d
-tmux split-window -v -l 10% 
-tmux -2 attach-session -d -t advent
+tmux-sessionizer $(pwd)
