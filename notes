@@ -1,4 +1,6 @@
-instalar o nvm (git clone e colocar no path)
 instalar o zsh (apt)
+
+criar um próprio instalador
+instalar o nvm (git clone e colocar no path)
 instalar o nvim (snap)
 instalar o tmux e o tmux package manager (apt e git clone)
