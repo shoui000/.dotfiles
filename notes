@@ -1,7 +1,14 @@
 instalar o zsh (apt)
 
 criar um próprio instalador
-instalar o nvm (git clone e colocar no path)
 instalar o nvim (snap)
 instalar o tmux e o tmux package manager (apt e git clone)
 instalar o oh my zsh
+instalar o yay
+
+instalação arch
+baixar o network manager
+baixar o firefox
+baixar o alacritty
+baixar o bluesman
+baixar o firewalld
