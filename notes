@@ -12,3 +12,5 @@ baixar o firefox
 baixar o alacritty
 baixar o bluesman
 baixar o firewalld
+baixar o xdg-utils
+(sudo pacman -Fy xdg-open) quando usando o xfce para baixar os extras
