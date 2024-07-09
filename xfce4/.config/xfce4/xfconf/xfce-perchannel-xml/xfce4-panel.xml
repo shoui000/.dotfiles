@@ -64,6 +64,8 @@
     </property>
     <property name="plugin-3" type="string" value="whiskermenu">
       <property name="recent" type="array">
+        <value type="string" value="xfce4-terminal-emulator.desktop"/>
+        <value type="string" value="Alacritty.desktop"/>
       </property>
       <property name="view-mode" type="int" value="1"/>
       <property name="category-show-name" type="bool" value="true"/>
