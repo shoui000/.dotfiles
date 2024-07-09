@@ -12,7 +12,7 @@
       <property name="icon-size" type="uint" value="16"/>
       <property name="size" type="uint" value="26"/>
       <property name="plugin-ids" type="array">
-        <value type="int" value="1"/>
+        <value type="int" value="3"/>
         <value type="int" value="2"/>
         <value type="int" value="5"/>
         <value type="int" value="6"/>
@@ -27,7 +27,6 @@
     </property>
   </property>
   <property name="plugins" type="empty">
-    <property name="plugin-1" type="string" value="applicationsmenu"/>
     <property name="plugin-2" type="string" value="tasklist">
       <property name="grouping" type="bool" value="true"/>
       <property name="flat-buttons" type="bool" value="false"/>
@@ -47,6 +46,9 @@
     </property>
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
+      <property name="known-items" type="array">
+        <value type="string" value="chrome_status_icon_1"/>
+      </property>
     </property>
     <property name="plugin-9" type="string" value="power-manager-plugin"/>
     <property name="plugin-10" type="string" value="notification-plugin"/>
@@ -59,6 +61,21 @@
     </property>
     <property name="plugin-14" type="string" value="actions">
       <property name="button-title" type="uint" value="0"/>
+    </property>
+    <property name="plugin-3" type="string" value="whiskermenu">
+      <property name="recent" type="array">
+      </property>
+      <property name="view-mode" type="int" value="1"/>
+      <property name="category-show-name" type="bool" value="true"/>
+      <property name="launcher-show-tooltip" type="bool" value="true"/>
+      <property name="launcher-show-description" type="bool" value="true"/>
+      <property name="position-categories-horizontal" type="bool" value="false"/>
+      <property name="position-categories-alternate" type="bool" value="false"/>
+      <property name="position-profile-alternate" type="bool" value="false"/>
+      <property name="position-search-alternate" type="bool" value="false"/>
+      <property name="position-commands-alternate" type="bool" value="true"/>
+      <property name="default-category" type="int" value="2"/>
+      <property name="recent-items-max" type="int" value="10"/>
     </property>
   </property>
 </channel>
