@@ -16,5 +16,3 @@ baixar o xdg-utils
 baixar o xorg-xinput
 (sudo pacman -Fy xdg-open) quando usando o xfce para baixar os extras
 sudo pacman -Syu
-
-auto tmux on alacritty
