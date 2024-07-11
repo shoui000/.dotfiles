@@ -17,10 +17,11 @@
         <value type="int" value="5"/>
         <value type="int" value="6"/>
         <value type="int" value="9"/>
+        <value type="int" value="1"/>
         <value type="int" value="10"/>
-        <value type="int" value="11"/>
-        <value type="int" value="12"/>
         <value type="int" value="13"/>
+        <value type="int" value="12"/>
+        <value type="int" value="11"/>
         <value type="int" value="14"/>
       </property>
       <property name="autohide-behavior" type="uint" value="0"/>
@@ -49,6 +50,11 @@
       <property name="known-items" type="array">
         <value type="string" value="chrome_status_icon_1"/>
       </property>
+      <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “rede deveza_5g” active: rede deveza_5g (54%)"/>
+        <value type="string" value="clipman"/>
+        <value type="string" value="networkmanager applet"/>
+      </property>
     </property>
     <property name="plugin-9" type="string" value="power-manager-plugin"/>
     <property name="plugin-10" type="string" value="notification-plugin"/>
@@ -64,8 +70,15 @@
     </property>
     <property name="plugin-3" type="string" value="whiskermenu">
       <property name="recent" type="array">
-        <value type="string" value="xfce4-terminal-emulator.desktop"/>
+        <value type="string" value="xfce4-file-manager.desktop"/>
+        <value type="string" value="xfce4-sensors.desktop"/>
+        <value type="string" value="xfce4-run.desktop"/>
+        <value type="string" value="xfce4-clipman.desktop"/>
+        <value type="string" value="xfce4-settings-editor.desktop"/>
+        <value type="string" value="xfce-settings-manager.desktop"/>
+        <value type="string" value="nm-connection-editor.desktop"/>
         <value type="string" value="Alacritty.desktop"/>
+        <value type="string" value="xfce4-terminal-emulator.desktop"/>
       </property>
       <property name="view-mode" type="int" value="1"/>
       <property name="category-show-name" type="bool" value="true"/>
@@ -78,6 +91,9 @@
       <property name="position-commands-alternate" type="bool" value="true"/>
       <property name="default-category" type="int" value="2"/>
       <property name="recent-items-max" type="int" value="10"/>
+    </property>
+    <property name="plugin-1" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
     </property>
   </property>
 </channel>
