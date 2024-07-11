@@ -8,11 +8,17 @@ instalar o yay
 
 instalação arch
 baixar o network manager
+nm-connection-editor
 baixar o firefox
 baixar o alacritty
 baixar o bluesman
 baixar o firewalld
 baixar o xdg-utils
 baixar o xorg-xinput
+
+noto-fonts noto-fonts-extra noto-fonts-emoji
+thunar-volman
+xfce4-mount-plugin
+xfce4-goodies
 (sudo pacman -Fy xdg-open) quando usando o xfce para baixar os extras
 sudo pacman -Syu
