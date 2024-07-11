@@ -4,3 +4,6 @@ startup_mode = "Maximized"
 [shell]
 program = "tmux"
 args = ["new-session", "-A", "-D", "-s main"]
+
+[keyboard]
+bindings = [{key = "NumpadEnter", chars = "\r"}]
