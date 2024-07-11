@@ -70,15 +70,6 @@
     </property>
     <property name="plugin-3" type="string" value="whiskermenu">
       <property name="recent" type="array">
-        <value type="string" value="xfce4-file-manager.desktop"/>
-        <value type="string" value="xfce4-sensors.desktop"/>
-        <value type="string" value="xfce4-run.desktop"/>
-        <value type="string" value="xfce4-clipman.desktop"/>
-        <value type="string" value="xfce4-settings-editor.desktop"/>
-        <value type="string" value="xfce-settings-manager.desktop"/>
-        <value type="string" value="nm-connection-editor.desktop"/>
-        <value type="string" value="Alacritty.desktop"/>
-        <value type="string" value="xfce4-terminal-emulator.desktop"/>
       </property>
       <property name="view-mode" type="int" value="1"/>
       <property name="category-show-name" type="bool" value="true"/>
@@ -90,7 +81,10 @@
       <property name="position-search-alternate" type="bool" value="false"/>
       <property name="position-commands-alternate" type="bool" value="true"/>
       <property name="default-category" type="int" value="2"/>
-      <property name="recent-items-max" type="int" value="10"/>
+      <property name="recent-items-max" type="int" value="0"/>
+      <property name="category-icon-size" type="int" value="2"/>
+      <property name="menu-opacity" type="int" value="100"/>
+      <property name="sort-categories" type="bool" value="false"/>
     </property>
     <property name="plugin-1" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
