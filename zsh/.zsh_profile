@@ -8,10 +8,6 @@ alias cls=clear
 alias python=python3
 alias vim=nvim
 
-# KEYBINDINGS
-bindkey -s ^f "advent -a\n"
-bindkey -s ^h "tmux-sessionizer\n"
-
 # PATH
 path+=("$HOME/.local/bin")
 path+=("/snap/bin")
