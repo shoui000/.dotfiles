@@ -2,6 +2,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 
 export ADVENT=$HOME/Projetos/advent-of-code
 export DOTFILES=$HOME/.dotfiles
+export OBSVAULT=$HOME/Projetos/treeshitter
 
 # ALIASES
 alias cls=clear
