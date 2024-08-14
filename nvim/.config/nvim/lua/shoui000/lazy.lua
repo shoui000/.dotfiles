@@ -60,9 +60,16 @@ require("lazy").setup({
     {'ThePrimeagen/vim-be-good'},
     {'vim-airline/vim-airline'},
     {'tpope/vim-commentary'},
-    -- {
-    --     "m4xshen/hardtime.nvim",
-    --     dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-    --     opts = {}
-    -- },
+
+    {'epwalsh/obsidian.nvim',
+    version = '*',
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+    },
+    opts = {
+        workspaces = {
+            { name = "treeshitter", path = "~/Projetos/treeshitter"}
+        },
+    }},
+
 }, opts)
