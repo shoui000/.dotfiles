@@ -315,3 +315,5 @@ require("obsidian").setup({
     end,
   },
 })
+
+vim.keymap.set("n", "<A-n>", function() vim.cmd("ObsidianNew") end)
