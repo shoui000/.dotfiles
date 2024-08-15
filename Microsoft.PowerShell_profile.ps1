@@ -57,6 +57,7 @@ function prompt
 
 $Env:DOTFILES = "D:/Projetos/.dotfiles/"
 $Env:HOME = $Env:UserProfile
+$Env:TREESHITTER = "D:/Projetos/treeshitter/"
 set-alias vim nvim 
 
 function hh

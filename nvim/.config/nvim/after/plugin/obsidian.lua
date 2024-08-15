@@ -9,6 +9,9 @@ require("obsidian").setup({
     {
       name = "treeshitter",
       path = "D://Projetos//treeshitter",
+      overrides = {
+          notes_subdir = "00_inbox",
+      },
     },
   },
 
@@ -18,6 +21,7 @@ require("obsidian").setup({
 
   -- Optional, if you keep notes in a specific subdirectory of your vault.
   -- notes_subdir = "notes",
+  notes_subdir = "00_inbox",
 
   -- Optional, set the log level for obsidian.nvim. This is an integer corresponding to one of the log
   -- levels defined by "vim.log.levels.*".
@@ -317,3 +321,4 @@ require("obsidian").setup({
 })
 
 vim.keymap.set("n", "<A-n>", function() vim.cmd("ObsidianNew") end)
+vim.keymap.set("n", "<leader>oo", "<cmd>e " .. os.getenv("TREESHITTER") .. "<CR>");
