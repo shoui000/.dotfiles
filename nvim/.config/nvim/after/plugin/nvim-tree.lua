@@ -4,7 +4,7 @@ vim.g.loaded_netrwPlugin = 1
 
 -- optionally enable 24-bit colour
 vim.opt.termguicolors = true
-vim.api.nvim_set_keymap("n", "<C-e>", ":NvimTreeToggle<cr>", {silent = true, noremap = true})
+vim.api.nvim_set_keymap("n", "<A-e>", ":NvimTreeToggle<cr>", {silent = true, noremap = true})
 
 local function my_on_attach(bufnr)
   local api = require "nvim-tree.api"

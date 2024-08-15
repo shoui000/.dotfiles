@@ -321,4 +321,5 @@ require("obsidian").setup({
 })
 
 vim.keymap.set("n", "<A-n>", function() vim.cmd("ObsidianNew") end)
-vim.keymap.set("n", "<leader>oo", "<cmd>e " .. os.getenv("TREESHITTER") .. "<CR>");
+vim.keymap.set("n", "<leader>b", "<cmd>e " .. os.getenv("TREESHITTER") .. "<CR>");
+vim.keymap.set("n", "<C-o>", function() vim.cmd("ObsidianOpen") end)
