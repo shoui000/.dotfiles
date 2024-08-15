@@ -55,6 +55,10 @@ function prompt
     }
 }
 
+$Env:DOTFILES = "D:/Projetos/.dotfiles/"
+$Env:HOME = $Env:UserProfile
+set-alias vim nvim 
+
 function hh
 {
     set-location "D:/Projetos"
