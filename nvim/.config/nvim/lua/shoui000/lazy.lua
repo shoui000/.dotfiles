@@ -19,6 +19,8 @@ local opts = {
 
 require("lazy").setup({
 
+    {'nvim-tree/nvim-tree.lua'},
+
     {'nvim-telescope/telescope.nvim', tag = '0.1.5', dependencies = { 'nvim-lua/plenary.nvim' }},
 
     {'ellisonleao/gruvbox.nvim', priority = 1000, config = true, opts = ...},
@@ -65,15 +67,6 @@ require("lazy").setup({
     {'vim-airline/vim-airline'},
     {'tpope/vim-commentary'},
 
-    {'epwalsh/obsidian.nvim',
-    version = '*',
-    dependencies = {
-        "nvim-lua/plenary.nvim",
-    },
-    opts = {
-        workspaces = {
-            { name = "treeshitter", path = "~/Projetos/treeshitter"}
-        },
-    }},
+    {'epwalsh/obsidian.nvim', version = '*', dependencies = {"nvim-lua/plenary.nvim",},},
 
 }, opts)
