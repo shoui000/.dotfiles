@@ -9,6 +9,11 @@ alias cls=clear
 alias python=python3
 alias vim=nvim
 
+hh() {
+    cd ~
+    clear
+}
+
 # PATH
 path+=("$HOME/.local/bin")
 path+=("/snap/bin")
