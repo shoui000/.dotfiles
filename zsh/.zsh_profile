@@ -14,6 +14,12 @@ hh() {
     clear
 }
 
+oo() {
+    cd $TREESHITTER
+    git fetch && git pull
+    nvim .
+}
+
 # PATH
 path+=("$HOME/.local/bin")
 path+=("/snap/bin")

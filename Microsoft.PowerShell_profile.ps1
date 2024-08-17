@@ -68,6 +68,8 @@ function hh
 
 function oo
 {
+    cd "D:/Projetos/treeshitter"
+    git fetch && git pull
     nvim "D:/Projetos/treeshitter"
 }
 
