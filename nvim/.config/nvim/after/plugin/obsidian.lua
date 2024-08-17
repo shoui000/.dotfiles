@@ -8,7 +8,7 @@ require("obsidian").setup({
   workspaces = {
     {
       name = "treeshitter",
-      path = "D://Projetos//treeshitter",
+      path = os.getenv("TREESHITTER"),
       overrides = {
           notes_subdir = "00_inbox",
       },
