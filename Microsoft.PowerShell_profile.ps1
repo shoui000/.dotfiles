@@ -12,7 +12,6 @@ set-alias pwd        get-location -Scope private
 set-alias r          invoke-history -Scope private
 set-alias rm         remove-item -Scope private
 set-alias rmdir      remove-item -Scope private
-
 set-alias cls        clear-host -Scope private
 set-alias chdir      set-location -Scope private
 set-alias erase      remove-item -Scope private
@@ -26,51 +25,33 @@ function help
     get-help $args[0] | out-host -paging
 }
 
-function man
-{
-    get-help $args[0] | out-host -paging
-}
-
 function mkdir
 {
     new-item -type directory -path $args
 }
 
-function md
-{
-    new-item -type directory -path $args
-}
-
-function prompt
-{
-    "PS " + $(get-location) + "> "
-}
-
-& {
-    for ($i = 0; $i -lt 26; $i++) 
-    { 
-        $funcname = ([System.Char]($i+65)) + ':'
-        $str = "function global:$funcname { set-location $funcname } " 
-        invoke-expression $str 
-    }
-}
-
-$Env:DOTFILES = "D:/Projetos/.dotfiles/"
-$Env:HOME = $Env:UserProfile
-$Env:TREESHITTER = "D:/Projetos/treeshitter/"
 set-alias vim nvim 
+
+$Env:HOME = $Env:UserProfile
+
+$Env:PROJETOS = "D:/Projetos"
+$Env:DOTFILES = "$Env:PROJETOS/.dotfiles/" 
+$Env:TREESHITTER = "$Env:PROJETOS/treeshitter/"
 
 function hh
 {
-    set-location "D:/Projetos"
+    set-location "$Env:PROJETOS"
     clear-host
 }
 
 function oo
 {
-    cd "D:/Projetos/treeshitter"
+    cd $Env:TREESHITTER
     git fetch && git pull
-    nvim "D:/Projetos/treeshitter"
+    nvim $Env:TREESHITTER
 }
 
-Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
+function dot
+{
+    cd $Env:DOTFILES
+}

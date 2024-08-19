@@ -1,8 +1,9 @@
 export XDG_CONFIG_HOME=$HOME/.config
 
-export ADVENT=$HOME/Projetos/advent-of-code
+export PROJETOS=$HOME/Projetos
+export ADVENT=$PROJETOS/advent-of-code
 export DOTFILES=$HOME/.dotfiles
-export TREESHITTER=$HOME/Projetos/treeshitter
+export TREESHITTER=$PROJETOS/treeshitter
 
 # ALIASES
 alias cls=clear
@@ -18,6 +19,10 @@ oo() {
     cd $TREESHITTER
     git fetch && git pull
     nvim .
+}
+
+dot() {
+    cd $DOTFILES
 }
 
 # PATH
