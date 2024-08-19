@@ -46,12 +46,12 @@ function hh
 
 function oo
 {
-    cd $Env:TREESHITTER
+    cd "$Env:TREESHITTER"
     git fetch && git pull
-    nvim $Env:TREESHITTER
+    nvim "$Env:TREESHITTER"
 }
 
 function dot
 {
-    cd $Env:DOTFILES
+    cd "$Env:DOTFILES"
 }
