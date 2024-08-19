@@ -65,13 +65,6 @@ require("obsidian").setup({
       end,
       opts = { buffer = true },
     },
-    -- Smart action depending on context, either follow link or toggle checkbox.
-    ["<leader><CR>"] = {
-      action = function()
-        return require("obsidian").util.smart_action()
-      end,
-      opts = { buffer = true, expr = true },
-    }
   },
 
   -- Where to put new notes. Valid options are
