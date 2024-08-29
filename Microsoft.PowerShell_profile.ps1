@@ -55,3 +55,19 @@ function dot
 {
     cd "$Env:DOTFILES"
 }
+
+function tt
+{
+
+  if ($args.Count -eq 1) {
+    $selected = $args[0]
+  }
+  else {
+      $selected = (Get-ChildItem -Path $Env:PROJETOS -Directory -Depth 1 | ForEach-Object { $_.FullName } | & fzf)
+  }
+
+  if (-not [string]::IsNullOrEmpty($selected)){
+    cd $selected
+      nvim .
+  }
+}
