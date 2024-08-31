@@ -2,3 +2,5 @@ xfce4/.config/xfce4/xfconf/xfce-perchannel-xml/
 bin/.local/share
 bin/.local/state
 nvim/.config/gh
+xfce4/.config/xfce4/help.rc
+
