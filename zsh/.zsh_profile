@@ -4,6 +4,8 @@ export PROJETOS=$HOME/Projetos
 export ADVENT=$PROJETOS/advent-of-code
 export DOTFILES=$HOME/.dotfiles
 export TREESHITTER=$PROJETOS/treeshitter
+export EDITOR=nvim
+export VISUAL=nvim
 
 # ALIASES
 alias cls=clear
