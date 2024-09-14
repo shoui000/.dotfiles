@@ -17,10 +17,6 @@ hh() {
     clear
 }
 
-oo() {
-    tmux-sessionizer $TREESHITTER
-}
-
 dot() {
     cd $DOTFILES
 }
