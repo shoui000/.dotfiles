@@ -47,8 +47,6 @@ function hh
 function oo
 {
     cd "$Env:TREESHITTER"
-    git fetch && git pull
-    nvim "$Env:TREESHITTER"
 }
 
 function dot
