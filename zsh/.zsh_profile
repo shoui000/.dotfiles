@@ -11,6 +11,7 @@ export VISUAL=nvim
 alias cls=clear
 alias python=python3
 alias vim=nvim
+alias gs="git status"
 
 hh() {
     cd ~
