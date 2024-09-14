@@ -3,4 +3,4 @@ bin/.local/share
 bin/.local/state
 nvim/.config/gh
 xfce4/.config/xfce4/help.rc
-
+nvim/.config/go
