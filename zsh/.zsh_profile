@@ -18,9 +18,7 @@ hh() {
 }
 
 oo() {
-    cd $TREESHITTER
-    git fetch && git pull
-    nvim .
+    tmux-sessionizer $TREESHITTER
 }
 
 dot() {
