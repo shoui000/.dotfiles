@@ -62,8 +62,6 @@ require("lazy").setup({
         },
     },
 
-    {'m4xshen/smartcolumn.nvim'},
-
     {'ThePrimeagen/vim-be-good'},
     {'vim-airline/vim-airline'},
     {'tpope/vim-commentary'},
