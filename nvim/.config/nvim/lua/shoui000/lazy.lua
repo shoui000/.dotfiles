@@ -66,6 +66,4 @@ require("lazy").setup({
     {'vim-airline/vim-airline'},
     {'tpope/vim-commentary'},
 
-    {'epwalsh/obsidian.nvim', version = '*', dependencies = {"nvim-lua/plenary.nvim",},},
-
 }, opts)
