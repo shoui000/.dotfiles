@@ -26,3 +26,4 @@ dot() {
 path+=("$HOME/.local/bin")
 path+=("/snap/bin")
 export PATH
+
