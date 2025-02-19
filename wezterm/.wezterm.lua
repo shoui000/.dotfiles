@@ -1,4 +1,10 @@
 local wezterm = require 'wezterm'
+local mux = wezterm.mux
+
+wezterm.on("gui-startup", function()
+  local tab, pane, window = mux.spawn_window{}
+  window:gui_window():toggle_fullscreen()
+end)
 
 -- Integration with neovim panes
 local function isViProcess(pane)
@@ -50,7 +56,7 @@ local config = wezterm.config_builder()
 
 config.default_prog = { 'pwsh' }
 
-config.color_scheme = 'Gruvbox Dark (Gogh)'
+config.color_scheme = 'carbonfox'
 config.font = wezterm.font('0xProto Nerd Font Mono')
 config.term = 'xterm-256color'
 
@@ -87,13 +93,15 @@ config.keys = {
     },
 
     -- Integration with neovim panes
-    { key = 'h', mods = 'CTRL', action = wezterm.action.EmitEvent('ActivatePaneDirection-left') },
-    { key = 'j', mods = 'CTRL', action = wezterm.action.EmitEvent('ActivatePaneDirection-down') },
-    { key = 'k', mods = 'CTRL', action = wezterm.action.EmitEvent('ActivatePaneDirection-up') },
-    { key = 'l', mods = 'CTRL', action = wezterm.action.EmitEvent('ActivatePaneDirection-right') },
+    { key = 'h', mods = 'CTRL', action = action.EmitEvent('ActivatePaneDirection-left') },
+    { key = 'j', mods = 'CTRL', action = action.EmitEvent('ActivatePaneDirection-down') },
+    { key = 'k', mods = 'CTRL', action = action.EmitEvent('ActivatePaneDirection-up') },
+    { key = 'l', mods = 'CTRL', action = action.EmitEvent('ActivatePaneDirection-right') },
 
-    { key = "F11", mods = "", action = wezterm.action.ToggleFullScreen },
-    { key = 'a', mods = 'LEADER|CTRL', action = wezterm.action.SendString '\x01', },
+    { key = "F11", mods = "", action = action.ToggleFullScreen },
+    { key = 'a', mods = 'LEADER|CTRL', action = action.SendString '\x01', },
+    { key = 'm', mods = "LEADER", action = action.TogglePaneZoomState },
+    { key = 'x', mods = 'LEADER', action = action.CloseCurrentPane { confirm = true} },
 }
 
 for i = 1, 9 do
