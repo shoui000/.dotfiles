@@ -63,4 +63,6 @@ require("lazy").setup({
     {'vim-airline/vim-airline'},
     {'tpope/vim-commentary'},
 
+    {'andweeb/presence.nvim'},
+
 }, opts)
