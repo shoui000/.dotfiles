@@ -1,5 +1,5 @@
 vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
 
-if "Windows":find(vim.loop.os_uname().sysname, 1 true) then
+if vim.loop.os_uname().sysname == "Windows_NT" then
     vim.g.undotree_DiffCommand = "FC"
 end
