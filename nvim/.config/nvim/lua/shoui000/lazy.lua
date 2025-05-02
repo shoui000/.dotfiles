@@ -62,6 +62,7 @@ require("lazy").setup({
     {'ThePrimeagen/vim-be-good'},
     {'vim-airline/vim-airline'},
     {'tpope/vim-commentary'},
+    {'ThePrimeagen/refactoring.nvim'},
 
     {'andweeb/presence.nvim'},
 
