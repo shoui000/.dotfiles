@@ -64,6 +64,4 @@ require("lazy").setup({
     {'tpope/vim-commentary'},
     {'ThePrimeagen/refactoring.nvim'},
 
-    {'andweeb/presence.nvim'},
-
 }, opts)
