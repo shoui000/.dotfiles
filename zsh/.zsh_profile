@@ -9,7 +9,6 @@ export VISUAL=nvim
 
 # ALIASES
 alias cls=clear
-alias python=python3
 alias vim=nvim
 alias gs="git status"
 

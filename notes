@@ -1,24 +1,22 @@
-instalar o zsh (apt)
+apt install zsh tmux go git build-essentials zlib1g-dev libssl-dev liblzma-dev fd-find ripgrep
+snap install nvim
 
-criar um próprio instalador
-instalar o nvim (snap)
-instalar o tmux e o tmux package manager (apt e git clone)
-instalar o oh my zsh
-instalar o yay
+// oh my zsh install script
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-instalação arch
-baixar o network manager
-nm-connection-editor
-baixar o firefox
-baixar o alacritty
-baixar o bluesman
-baixar o firewalld
-baixar o xdg-utils
-baixar o xorg-xinput
+// tmux tpm install script
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-noto-fonts noto-fonts-extra noto-fonts-emoji
-thunar-volman
-xfce4-mount-plugin
-xfce4-goodies
-(sudo pacman -Fy xdg-open) quando usando o xfce para baixar os extras
-sudo pacman -Syu
+go install github.com/asdf-vm/asdf/cmd/asdf@latest
+
+asdf plugin add lua
+asdf install lua latest
+asdf set -u lua latest
+
+asdf plugin add python
+asdf install python latest
+asdf set -u python latest
+
+asdf plugin add nodejs
+asdf install nodejs latest
+asdf set -u nodejs latest
