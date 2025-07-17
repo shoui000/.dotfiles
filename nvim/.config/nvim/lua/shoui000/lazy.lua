@@ -59,7 +59,6 @@ require("lazy").setup({
     },
 
     {'vim-airline/vim-airline'},
-    {'tpope/vim-commentary'},
     {'ThePrimeagen/refactoring.nvim'},
 
 }, opts)
