@@ -1,1 +1,1 @@
-vim.cmd("AirlineTheme base16_gruvbox_dark_soft")
+vim.cmd("AirlineTheme base16_classic_dark")

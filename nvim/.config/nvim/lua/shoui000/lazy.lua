@@ -21,7 +21,6 @@ require("lazy").setup({
 
     {'nvim-telescope/telescope.nvim', tag = '0.1.5', dependencies = { 'nvim-lua/plenary.nvim' }},
 
-    {'ellisonleao/gruvbox.nvim', priority = 1000, config = true, opts = ...},
     {'vim-airline/vim-airline-themes'},
 
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
