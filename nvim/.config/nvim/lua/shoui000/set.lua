@@ -31,3 +31,7 @@ vim.opt.colorcolumn = "80"
 vim.diagnostic.config({ virtual_text = true })
 
 vim.opt.acd = true
+
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.opt.fen = false
