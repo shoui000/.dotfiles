@@ -6,10 +6,10 @@ local action = wezterm.action
 local module = {}
 
 function module.apply_to_config(config)
-  wezterm.on("gui-startup", function()
-    local tab, pane, window = mux.spawn_window{}
-    window:gui_window():toggle_fullscreen()
-  end)
+  -- wezterm.on("gui-startup", function()
+  --   local tab, pane, window = mux.spawn_window{}
+  --   window:gui_window():toggle_fullscreen()
+  -- end)
 
   -- -- Integration with neovim panes
   -- local function isViProcess(pane)
