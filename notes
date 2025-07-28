@@ -1,4 +1,4 @@
-apt install zsh tmux go git build-essentials zlib1g-dev libssl-dev liblzma-dev fd-find ripgrep
+apt install golang zsh tmux git build-essential zlib1g-dev libssl-dev liblzma-dev fd-find ripgrep
 snap install nvim
 
 // oh my zsh install script
