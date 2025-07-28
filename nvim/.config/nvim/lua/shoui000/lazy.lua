@@ -39,8 +39,7 @@ require("lazy").setup({
         },
     },
 
-    {'vim-airline/vim-airline'},
-    {'vim-airline/vim-airline-themes'},
+    {'nvim-lualine/lualine.nvim'},
 
     {"ThePrimeagen/harpoon"},
     {"mbbill/undotree"},
