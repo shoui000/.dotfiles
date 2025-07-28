@@ -40,6 +40,7 @@ require("lazy").setup({
     },
 
     {'nvim-lualine/lualine.nvim'},
+    {'folke/zen-mode.nvim', dependencies = {{'folke/twilight.nvim'}}},
 
     {"ThePrimeagen/harpoon"},
     {"mbbill/undotree"},
