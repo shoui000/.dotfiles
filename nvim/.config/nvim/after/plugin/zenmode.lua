@@ -30,7 +30,7 @@ require('zen-mode').setup({
         -- statusline will be shown only if 'laststatus' == 3
         laststatus = 0, -- turn off the statusline in zen mode
       },
-      twilight = { enabled = true }, -- enable to start Twilight when zen mode opens
+      -- twilight = { enabled = true }, -- enable to start Twilight when zen mode opens
       gitsigns = { enabled = false }, -- disables git signs
       tmux = { enabled = true }, -- disables the tmux statusline
       todo = { enabled = false }, -- if set to "true", todo-comments.nvim highlights will be disabled
@@ -54,7 +54,7 @@ require('zen-mode').setup({
       wezterm = {
         enabled = true,
         -- can be either an absolute font size or the number of incremental steps
-        font = "+4", -- (10% increase per step)
+        font = "12", -- (10% increase per step)
       },
       -- this will change the scale factor in Neovide when in zen mode
       -- See alse also the Plugins/Wezterm section in this projects README
@@ -84,3 +84,10 @@ require('zen-mode').setup({
 
 vim.keymap.set("n", "<leader>zz", function() require("zen-mode").toggle() end)
 
+vim.keymap.set("n", "<leader>zZ", function()
+  require("zen-mode").toggle({
+    plugins = {
+      twilight = { enabled = false }
+    }
+  })
+end)
