@@ -1,1 +1,1 @@
-require("shoui000")
+require("config.init")
