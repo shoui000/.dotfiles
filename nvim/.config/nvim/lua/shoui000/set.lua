@@ -32,6 +32,6 @@ vim.diagnostic.config({ virtual_text = true })
 
 -- vim.opt_local.acd = true
 
-vim.opt.foldmethod = 'expr'
-vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-vim.opt.fen = false
+-- vim.opt.foldmethod = 'expr'
+-- vim.opt.foldexpr = 'v:lua.vim.lsp.foldexpr()'
+-- vim.opt.fen = false
