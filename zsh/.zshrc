@@ -1,6 +1,5 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:/snap/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -110,5 +109,4 @@ source ~/.zsh_keybindings
 export PATH="$HOME/go/bin/:$PATH"
 
 unsetopt LIST_BEEP
-
-eval `keychain --quiet --eval --agents ssh id_ed25519_github`
+export PATH="/home/ddeveza/.local/share/mise/shims:$PATH"
