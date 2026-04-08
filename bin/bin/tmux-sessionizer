@@ -1,10 +1,27 @@
 #!/usr/bin/env bash
 # shout out to primeagen
 
+CONFIG="${HOME}/.config/tmux-sessionizer/config"
+
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/Projetos -mindepth 1 -maxdepth 1 -type d | fzf)
+    if [[ -f "$CONFIG" ]]; then
+        selected=$(
+            while IFS= read -r line; do
+                [[ "$line" =~ ^\s*# ]] && continue
+                [[ -z "$line" ]] && continue
+
+                path="${line/#\~/$HOME}"
+
+                [[ ! -d "$path" ]] && continue
+
+                find "$path" -mindepth 1 -maxdepth 1 -type d
+            done < "$CONFIG" | fzf
+        )
+    else
+        selected=$(find ~/Projetos -mindepth 1 -maxdepth 1 -type d | fzf)
+    fi
 fi
 
 if [[ -z $selected ]]; then
@@ -23,8 +40,8 @@ else
     fi
 
     if [[ -z $TMUX ]]; then
-      tmux attach-session -t $selected_name
+        tmux attach-session -t $selected_name
     else
-      tmux switch-client -t $selected_name
+        tmux switch-client -t $selected_name
     fi
 fi
