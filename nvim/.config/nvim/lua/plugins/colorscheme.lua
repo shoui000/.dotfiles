@@ -1,7 +1,6 @@
 return {
-  "sainnhe/everforest",
-  priority = 1000,
-  config = function ()
-    vim.cmd("colorscheme everforest")
-  end
+	"vague-theme/vague.nvim",
+	config = function ()
+		vim.cmd("colorscheme vague")
+	end
 }

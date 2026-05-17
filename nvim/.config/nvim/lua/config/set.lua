@@ -26,12 +26,6 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "80"
+-- vim.opt.colorcolumn = "80"
 
 vim.diagnostic.config({ virtual_text = true })
-
--- vim.opt_local.acd = true
-
--- vim.opt.foldmethod = 'expr'
--- vim.opt.foldexpr = 'v:lua.vim.lsp.foldexpr()'
--- vim.opt.fen = false
