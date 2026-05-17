@@ -23,6 +23,7 @@ dot() {
 
 # PATH
 path+=("$HOME/.local/bin")
-path+=("/snap/bin")
+path+=("$HOME/go/bin/:$PATH")
+path+=("$HOME/.cargo/bin")
 export PATH
 
