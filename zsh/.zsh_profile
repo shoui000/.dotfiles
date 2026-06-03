@@ -1,16 +1,13 @@
 export XDG_CONFIG_HOME=$HOME/.config
 
 export PROJETOS=$HOME/Projetos
-export ADVENT=$PROJETOS/advent-of-code
 export DOTFILES=$HOME/.dotfiles
-export TREESHITTER=$PROJETOS/treeshitter
 export EDITOR=nvim
 export VISUAL=nvim
 
 # ALIASES
 alias cls=clear
 alias vim=nvim
-alias gs="git status"
 
 hh() {
     cd ~
@@ -19,11 +16,11 @@ hh() {
 
 dot() {
     cd $DOTFILES
+		nvim .
 }
 
 # PATH
-path+=("$HOME/.local/bin")
-path+=("$HOME/go/bin/:$PATH")
+path+=("$HOME/go/bin/")
 path+=("$HOME/.cargo/bin")
 export PATH
 

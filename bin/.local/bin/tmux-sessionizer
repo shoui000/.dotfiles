@@ -11,11 +11,8 @@ else
             while IFS= read -r line; do
                 [[ "$line" =~ ^\s*# ]] && continue
                 [[ -z "$line" ]] && continue
-
                 path="${line/#\~/$HOME}"
-
                 [[ ! -d "$path" ]] && continue
-
                 find "$path" -mindepth 1 -maxdepth 1 -type d
             done < "$CONFIG" | fzf
         )
@@ -25,20 +22,21 @@ else
 fi
 
 if [[ -z $selected ]]; then
-    tmux new-session -A -D -s main
+    if [[ -n $TMUX ]]; then
+        tmux switch-client -t main 2>/dev/null || (tmux new-session -ds main && tmux switch-client -t main)
+    else
+        tmux new-session -A -s main
+    fi
 else
     selected_name=$(basename "$selected" | tr . _)
     tmux_running=$(pgrep tmux)
-
     if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
         tmux new-session -s $selected_name -c $selected
         exit 0
     fi
-
     if ! tmux has-session -t=$selected_name 2> /dev/null; then
         tmux new-session -ds $selected_name -c $selected
     fi
-
     if [[ -z $TMUX ]]; then
         tmux attach-session -t $selected_name
     else
