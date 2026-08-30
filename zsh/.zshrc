@@ -1,6 +1,11 @@
 source ~/.zsh_profile
 source ~/.zsh_keybindings
 
+autoload -U compinit && compinit
+
+# Desativa a sensibilidade a maiúsculas/minúsculas no autocompletar
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
 unsetopt LIST_BEEP
 path+=("/home/ddeveza/.local/share/mise/shims")
 path+=("/home/ddeveza/.local/bin/")
