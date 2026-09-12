@@ -1,3 +1,12 @@
 # KEYBINDINGS
 bindkey -s ^f "tmux-sessionizer\n"
 bindkey -e
+
+bindkey "^[[3~" delete-char           # Delete
+bindkey "^[[H" beginning-of-line      # Home
+bindkey "^[[F" end-of-line            # End
+bindkey "^[[1;5C" forward-word        # Ctrl + Seta Direita
+bindkey "^[[1;5D" backward-word       # Ctrl + Seta Esquerda
+bindkey "^H" backward-kill-word       # Ctrl + Backspace
+bindkey "^[[3;5~" kill-word           # Ctrl + Delete
+bindkey "^[[Z" reverse-menu-complete  # Shift + Tab
