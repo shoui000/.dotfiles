@@ -22,5 +22,7 @@ dot() {
 # PATH
 path+=("$HOME/go/bin/")
 path+=("$HOME/.cargo/bin")
+path+=("$HOME/.local/bin/")
+path=("$HOME/.local/share/mise/shims" $path)
 export PATH
 
