@@ -39,7 +39,6 @@ return {
 
 				require('mason').setup({})
 				require('mason-lspconfig').setup({
-					ensure_installed = {'ts_ls', 'rust_analyzer', 'gopls'}, -- You need npm to have ts_ls
 					handlers = {
 						function(server_name)
 							require('lspconfig')[server_name].setup({
