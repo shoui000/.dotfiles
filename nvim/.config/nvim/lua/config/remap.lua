@@ -33,8 +33,9 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>vpp", function()
-  vim.cmd("lcd " .. vim.fn.stdpath("config"))
-  vim.cmd("e " .. vim.fn.stdpath("config"))
+	local config = vim.fn.stdpath("config")
+	vim.cmd("tabnew " .. vim.fn.fnameescape(config))
+	vim.cmd("tcd " .. vim.fn.fnameescape(config))
 end);
 
 vim.keymap.set("n", "<leader><leader>", function()

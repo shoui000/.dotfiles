@@ -2,12 +2,13 @@ export XDG_CONFIG_HOME=$HOME/.config
 
 export PROJETOS=$HOME/Projetos
 export DOTFILES=$HOME/.dotfiles
+export ANOTACOES=$PROJETOS/treeshitter
 export EDITOR=nvim
 export VISUAL=nvim
 
-# ALIASES
 alias cls=clear
 alias vim=nvim
+alias gs="git status"
 
 hh() {
     cd ~
@@ -17,6 +18,10 @@ hh() {
 dot() {
     cd $DOTFILES
 		nvim .
+}
+
+nota() {
+	nvim -c "Nota"
 }
 
 # PATH
