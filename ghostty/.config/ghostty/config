@@ -4,4 +4,5 @@ window-padding-x = 0
 window-padding-color = extend
 theme = Seti
 font-size = 12
+font-family = "JuliaMono"
 title = ""

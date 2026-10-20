@@ -9,6 +9,7 @@ export VISUAL=nvim
 alias cls=clear
 alias vim=nvim
 alias gs="git status"
+alias ssh="TERM=xterm-256color ssh"
 
 hh() {
     cd ~
