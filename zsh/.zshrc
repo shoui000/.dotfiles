@@ -19,6 +19,37 @@ fi
 # Some more ls aliases
 alias l='ls -aliF'
 
+zmodload zsh/terminfo
+
+# ===================================================================
+# GATILHO MÁGICO: Força o terminal para o "Application Mode" no Zsh
+# Isso padroniza os códigos recebidos, não importa se você está 
+# no Ghostty puro ou dentro do Tmux.
+# ===================================================================
+if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
+  function zle-line-init() { echoti smkx }
+  function zle-line-finish() { echoti rmkx }
+  zle -N zle-line-init
+  zle -N zle-line-finish
+fi
+
+# ===================================================================
+# Agora você SÓ precisa ler o terminfo de forma genérica!
+# ===================================================================
+[[ -n "${terminfo[kdch1]}" ]] && bindkey "${terminfo[kdch1]}" delete-char       # Delete
+[[ -n "${terminfo[khome]}" ]] && bindkey "${terminfo[khome]}" beginning-of-line # Home
+[[ -n "${terminfo[kend]}"  ]] && bindkey "${terminfo[kend]}"  end-of-line       # End
+[[ -n "${terminfo[kcbt]}"  ]] && bindkey "${terminfo[kcbt]}"  reverse-menu-complete # Shift + Tab
+
+# ===================================================================
+# Ctrl + Setas (Convenção universal xterm, pois o terminfo não cobre)
+# ===================================================================
+bindkey "^[[1;5C" forward-word      # Ctrl + Seta Direita
+bindkey "^[[1;5D" backward-word     # Ctrl + Seta Esquerda
+bindkey "^H" backward-kill-word     # Ctrl + Backspace
+bindkey "^W" backward-kill-word     # Ctrl + Backspace (Alternativa)
+bindkey "^[[3;5~" kill-word         # Ctrl + Delete
+
 ## ZSH PROMPT
 
 # Carrega suporte nativo a cores e variáveis
