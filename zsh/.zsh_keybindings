@@ -1,4 +1,4 @@
 # KEYBINDINGS
-bindkey -s ^f "tmux-sessionizer\n"
 bindkey -e
+bindkey -s ^f "tmux-sessionizer\n"
 
